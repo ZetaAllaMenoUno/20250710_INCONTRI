@@ -8,8 +8,6 @@ corso: "Musica Elettronica"
 esame: "COME01"
 abstract: |
   questo dovrebbe essere il sommario...
-header-includes:
-  - \usepackage{styles/tesina}
 documentclass: article
 fontsize: 12pt
 toc: true
