@@ -1,3 +1,3 @@
-# CONCLUSIONE
+# Thanks
 
 Eppur si muove...
