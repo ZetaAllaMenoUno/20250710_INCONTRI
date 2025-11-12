@@ -97,8 +97,6 @@ def main():
         for line in abstract_content.split('\n'):
             out.write(f"  {line}\n")
 
-        out.write("header-includes:\n")
-        out.write("  - \\usepackage{styles/tesina}\n")
         out.write("documentclass: article\n")
         out.write("fontsize: 12pt\n")
         out.write("toc: true\n")
