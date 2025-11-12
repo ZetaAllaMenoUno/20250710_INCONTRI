@@ -87,6 +87,7 @@ jobs:
         pandoc README.md \
           --pdf-engine=xelatex \
           --template=styles/template.latex \
+          -H metadata.yaml \
           --syntax-highlighting=tango \
           --filter pandoc-crossref \
           --lua-filter=lua-filters/multibib.lua \
