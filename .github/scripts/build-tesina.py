@@ -84,34 +84,20 @@ def main():
     with open("README.md", "w", encoding='utf-8') as out:
         # --- Scrivi il frontmatter YAML completo ---
         out.write("---\n")
-        
-        out.write(f"title: \"{tesina_data.get('titolo', 'Senza Titolo')}\"\n")
-        out.write(f"subtitle: \"{tesina_data.get('sottotitolo', '')}\"\n")
-        out.write(f"author: \"{tesina_data.get('autore', 'Autore Sconosciuto')}\"\n")
-        out.write(f"date: \"{tesina_data.get('data', '')}\"\n")
-        out.write(f"conservatorio: \"{tesina_data.get('conservatorio', '')}, {tesina_data.get('citta', '')}\"\n")
-        out.write(f"corso: \"{tesina_data.get('corso', '')}\"\n")
-        out.write(f"esame: \"{tesina_data.get('esame', '')}\"\n")
-
+    
         out.write("abstract: |\n")
         for line in abstract_content.split('\n'):
             out.write(f"  {line}\n")
 
-        out.write("documentclass: article\n")
-        out.write("fontsize: 12pt\n")
-        out.write("toc: true\n")
-        out.write("toc-depth: 2\n")
-
-
         if found_bib_files:
-            out.write("bibliography:\n")
-            for key, path in sorted(found_bib_files.items()):
-                out.write(f"  {key}: {path}\n")
+            with open("bibliography.yaml", "w", encoding='utf-8') as bib_file:
+                bib_file.write("---\n")
+                bib_file.write("bibliography:\n")
+                for key, path in sorted(found_bib_files.items()):
+                    bib_file.write(f"  {key}: {path}\n")
+                bib_file.write("---\n")
         else:
-            print("[WARN] No bibliography files found. 'bibliography' field will not be added to frontmatter.")
-
-        out.write("csl: styles/consAq-author-date.csl\n")
-        out.write(r'nocite: "@*"' + "\n")
+            print("[WARN] No bibliography files found. Skipping bibliography.yaml.")
 
         out.write("---\n\n")
         
