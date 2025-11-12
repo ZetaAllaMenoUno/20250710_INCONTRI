@@ -1,25 +1,3 @@
----
-title: "INCONTRI"
-subtitle: "Acousmatic concert documentation by  z⁻¹"
-author: "z⁻¹"
-date: "10/07/2025"
-conservatorio: "Conservatorio di Atlantide, Atlantide"
-corso: "Musica Elettronica"
-esame: "COME01"
-abstract: |
-  questo dovrebbe essere il sommario...
-documentclass: article
-fontsize: 12pt
-toc: true
-toc-depth: 2
-bibliography:
-  bib: docs/bibliografia.bib
-  dis: docs/discografia.bib
-  sit: docs/sitografia.bib
-csl: styles/consAq-author-date.csl
-nocite: "@*"
----
-
 # Introduction
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -389,6 +367,9 @@ dove $O$ è il fattore di sovrapposizione, $D$ la densità in Hz e $T$ la durata
 # Thanks
 
 Eppur si muove...
+
+
+questo dovrebbe essere il sommario...
 
 
 # BIBLIOGRAFIA
