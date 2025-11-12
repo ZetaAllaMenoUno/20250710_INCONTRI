@@ -79,6 +79,7 @@ jobs:
         PDF_NAME="${SAFE_TITLE}-${TIMESTAMP}.pdf"
         pandoc README.md \
           --pdf-engine=xelatex \
+          --metadata-file=metadata.yaml \
           --template=styles/template.latex \
           --syntax-highlighting=tango \
           --filter pandoc-crossref \
