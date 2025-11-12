@@ -1,7 +1,15 @@
 ---
 title: "INCONTRI"
 subtitle: "Acousmatic concert documentation by  z⁻¹"
-author: "z⁻¹" # Usiamo 'autore' invece di 'candidato.nome' per coerenza con Pandoc
+group: "z⁻¹" 
+author:
+- "Pietro Barale"
+- "Giulio Romano De Mattia"
+- "Francesco Ferracuti"
+- "Filippo Fossà"
+- "Edoardo Scioscia"
+- "Luca Spanedda"
+- "Davide Tedesco"
 documentclass: article
 fontsize: 12pt
 toc: true
