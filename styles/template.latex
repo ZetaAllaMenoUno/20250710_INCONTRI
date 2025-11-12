@@ -36,27 +36,38 @@ $endfor$
 ]{geometry}
 
 % ============================================================================
-% FONT - Liberation Sans/Arial con logica condizionale
+% FONT - Presi direttamente dai metadati
 % ============================================================================
 \usepackage{fontspec}
-\usepackage{etoolbox}
 
-% Importa configurazione font esterna
-\input{styles/config_fonts.tex}
+% Imposta i font dai metadati (se definiti)
+$if(mainfont)$
+\setmainfont{$mainfont$}
+$endif$
 
-% Default font
-\newcommand{\defaultfont}{Liberation Sans}
+$if(sansfont)$
+\setsansfont{$sansfont$}
+$endif$
 
-% Scelta font in base alla variabile \chosenfont
-\ifdefstring{\chosenfont}{arial}{
-    \setmainfont{Arial}
-    \setsansfont{Arial}
-    \setmonofont{Arial}
-}{
-    \setmainfont{\defaultfont}
-    \setsansfont{\defaultfont}
-    \setmonofont{Liberation Mono}
-}
+$if(monofont)$
+\setmonofont{$monofont$}
+$endif$
+
+% Se nessun font è specificato, usa i default del sistema
+$if(mainfont)$
+$else$
+\setmainfont{Liberation Sans}
+$endif$
+
+$if(sansfont)$
+$else$
+\setsansfont{Liberation Sans}
+$endif$
+
+$if(monofont)$
+$else$
+\setmonofont{Liberation Mono}
+$endif$
 
 \renewcommand{\familydefault}{\sfdefault}
 
