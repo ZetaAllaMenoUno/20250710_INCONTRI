@@ -80,6 +80,7 @@ jobs:
         pandoc README.md \
           --pdf-engine=xelatex \
           --metadata-file=metadata.yaml \
+          --metadata-file=bibliography.yaml \
           --template=styles/template.latex \
           --syntax-highlighting=tango \
           --filter pandoc-crossref \
