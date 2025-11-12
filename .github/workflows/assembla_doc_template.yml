@@ -66,16 +66,6 @@ jobs:
         FONT=$(python3 .github/scripts/get_font.py)
         echo "FONT=$FONT" >> $GITHUB_ENV
 
-    - name: Install Microsoft Core Fonts (including Arial)
-      if: env.FONT == 'arial'
-      run: |
-        apt-get update
-        # Accetta automaticamente la licenza EULA dei Microsoft fonts
-        echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
-        apt-get install -y ttf-mscorefonts-installer fontconfig
-        # Aggiorna la cache dei font per renderli disponibili subito
-        fc-cache -f
-
     - name: Extract metadata & concatenate markdown
       run: |
         rm -f README.md *.pdf        
