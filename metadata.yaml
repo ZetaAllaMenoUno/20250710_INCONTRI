@@ -1,0 +1,13 @@
+---
+title: "INCONTRI"
+subtitle: "Acousmatic concert documentation by  z⁻¹"
+author: "z⁻¹" # Usiamo 'autore' invece di 'candidato.nome' per coerenza con Pandoc
+documentclass: article
+fontsize: 12pt
+toc: true
+toc-depth: 2
+csl: styles/consAq-author-date.csl
+environment:
+  font: #arial
+
+---
