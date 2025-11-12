@@ -11,6 +11,7 @@ def main():
     # ==========================================
     # 1. TROVA E ORDINA I FILE DELLE SEZIONI
     # ==========================================
+    docs_dir = Path("docs/sezioni")
     print("[*] Finding and sorting markdown section files...")
     if not docs_dir.exists():
         print(f"[ERROR] Directory {docs_dir} not found!")
