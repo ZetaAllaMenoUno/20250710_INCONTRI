@@ -60,13 +60,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Read font from config.yaml
+    - name: Read font from metadata.yaml
       id: read_font
       run: |
         FONT=$(python3 .github/scripts/get_font.py)
         echo "FONT=$FONT" >> $GITHUB_ENV
 
-    - name: Extract metadata & concatenate markdown
+    - name: Concatenate markdown
       run: |
         rm -f README.md *.pdf        
         python3 .github/scripts/build-tesina.py
@@ -87,7 +87,7 @@ jobs:
         pandoc README.md \
           --pdf-engine=xelatex \
           --template=styles/template.latex \
-          -H metadata.yaml \
+          -H metadata.yaml -H bibliography.yaml \ #bibliography è un file generato dinamicamente dallo script build-tesina.py
           --syntax-highlighting=tango \
           --filter pandoc-crossref \
           --lua-filter=lua-filters/multibib.lua \
