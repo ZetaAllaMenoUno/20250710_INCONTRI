@@ -16,3 +16,10 @@ tesina:
   
 environment:
   font: #arial
+
+style:
+  documentclass: article
+  fontsize: 12pt
+  toc: true
+  toc-depth: 2
+  csl: styles/consAq-author-date.csl
