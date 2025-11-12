@@ -88,7 +88,9 @@ def main():
         out.write("abstract: |\n")
         for line in abstract_content.split('\n'):
             out.write(f"  {line}\n")
+        out.write("---\n\n")
 
+        
         if found_bib_files:
             with open("bibliography.yaml", "w", encoding='utf-8') as bib_file:
                 bib_file.write("---\n")
@@ -98,8 +100,6 @@ def main():
                 bib_file.write("---\n")
         else:
             print("[WARN] No bibliography files found. Skipping bibliography.yaml.")
-
-        out.write("---\n\n")
         
         # --- Concatena i file markdown delle sezioni ---
         print("[*] Concatenating markdown files...")
