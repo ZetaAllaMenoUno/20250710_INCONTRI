@@ -73,7 +73,7 @@ jobs:
 
     - name: Build PDF with Pandoc
       run: |
-        TITLE=$(sed -n '/^---$/,/^---$/p' README.md | grep '^title:' | head -n1 | sed 's/title:[[:space:]]*//; s/^ *//; s/ *$//; s/[*]//g')
+        TITLE=$(grep '^title:' metadata.yaml | cut -d':' -f2- | sed 's/^[[:space:]]*//; s/[[:space:]]*$//; s/[*]//g')
         SAFE_TITLE=$(echo "$TITLE" | tr ' ' '_' | tr -cd '[:alnum:]_')
         TIMESTAMP=$(date +%Y%m%d_%H%M%S)
         PDF_NAME="${SAFE_TITLE}-${TIMESTAMP}.pdf"
@@ -83,8 +83,7 @@ jobs:
           --syntax-highlighting=tango \
           --filter pandoc-crossref \
           --lua-filter=lua-filters/multibib.lua \
-          -o pino.pdf
-        #"$PDF_NAME"  
+          -o "$PDF_NAME"  
         echo "PDF_NAME=$PDF_NAME" >> $GITHUB_ENV
         mkdir -p pages_artifact
         cp "${PDF_NAME}" pages_artifact/latest.pdf
