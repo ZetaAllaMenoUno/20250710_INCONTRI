@@ -11,7 +11,7 @@ author:
 - "Luca Spanedda"
 - "Davide Tedesco"
 documentclass: article
-geometry: "left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,landscape"
+geometry: "top=2.5cm,bottom=2.5cm,left=2cm,right=2cm"
 papersize: a4     
 classoption:
 - landscape
