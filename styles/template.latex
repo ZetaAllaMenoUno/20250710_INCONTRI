@@ -25,15 +25,15 @@ $endfor$
 ]{$documentclass$}
 
 % ============================================================================
-% GEOMETRIA PAGINA - Margini conservatorio
+% GEOMETRY - Gestione margini e layout pagina
 % ============================================================================
-\usepackage[
-  a4paper, 
-  top=2.5cm, 
-  bottom=2.5cm, 
-  left=2cm, 
-  right=2cm
-]{geometry}
+\usepackage{geometry}
+$if(geometry)$
+  \geometry{$geometry$}
+$else$
+  % Default margins
+  \geometry{a4paper,top=2.5cm,bottom=2.5cm,left=2cm,right=2cm}
+$endif$
 
 % ============================================================================
 % FONT - Presi direttamente dai metadati
