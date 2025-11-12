@@ -11,11 +11,13 @@ author:
 - "Luca Spanedda"
 - "Davide Tedesco"
 documentclass: article
+geometry: "a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,landscape"
 fontsize: 12pt
+mainfont: #Arial # Usa il nome esatto del font di sistema
+sansfont: #Arial # Opzionale: per il testo sans-serif
+monofont: #Courier New # Opzionale: per il testo a spaziatura fissa (codice)
 toc: true
 toc-depth: 2
 csl: styles/consAq-author-date.csl
 nocite: "@*"
-mainfont: #Arial # Usa il nome esatto del font di sistema
-sansfont: #Arial # Opzionale: per il testo sans-serif
 ---
