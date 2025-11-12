@@ -13,6 +13,8 @@ author:
 documentclass: article
 geometry: "left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,landscape"
 papersize: a4     
+classoption:
+- landscape
 fontsize: 12pt
 mainfont: #Arial # Usa il nome esatto del font di sistema
 sansfont: #Arial # Opzionale: per il testo sans-serif
