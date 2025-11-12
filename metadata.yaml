@@ -16,9 +16,9 @@ papersize: a4
 classoption:
 - landscape
 fontsize: 12pt
-mainfont: #Arial # Usa il nome esatto del font di sistema
-sansfont: #Arial # Opzionale: per il testo sans-serif
-monofont: #Courier New # Opzionale: per il testo a spaziatura fissa (codice)
+mainfont: 
+sansfont: 
+monofont: 
 toc: true
 toc-depth: 2
 csl: styles/consAq-author-date.csl
