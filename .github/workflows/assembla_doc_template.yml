@@ -1,4 +1,4 @@
-name: Build Tesina PDF
+name: Build PDF
 
 on:
   push:
@@ -76,12 +76,11 @@ jobs:
         TITLE=$(sed -n '/^---$/,/^---$/p' README.md | grep '^title:' | head -n1 | sed 's/title:[[:space:]]*//; s/^ *//; s/ *$//; s/[*]//g')
         SAFE_TITLE=$(echo "$TITLE" | tr ' ' '_' | tr -cd '[:alnum:]_')
         TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-        #PDF_NAME="${SAFE_TITLE}-${TIMESTAMP}.pdf"
-        PDF_NAME="${SAFE_TITLE}-CONSAQ-${TIMESTAMP}.pdf"
+        PDF_NAME="${SAFE_TITLE}-${TIMESTAMP}.pdf"
         pandoc README.md \
           --pdf-engine=xelatex \
           --template=styles/template.latex \
-          -H metadata.yaml -H bibliography.yaml \ #bibliography è un file generato dinamicamente dallo script build-tesina.py
+          --metadata-file metadata.yaml --metadata-file bibliography.yaml \ 
           --syntax-highlighting=tango \
           --filter pandoc-crossref \
           --lua-filter=lua-filters/multibib.lua \
