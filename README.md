@@ -1,11 +1,11 @@
 ---
-title: "Il Suono e la Forma"
-subtitle: "Un'analisi della sintesi granulare"
-author: "Mario Rossi"
-date: "15/07/2025"
-conservatorio: "Conservatorio A. Casella, L'Aquila"
-corso: "Musica Elettronica DCPL34"
-esame: "Sintesi e Campionamento"
+title: "INCONTRI"
+subtitle: "Acousmatic concert documentation by  z⁻¹"
+author: "z⁻¹"
+date: "10/07/2025"
+conservatorio: "Conservatorio di Atlantide, Atlantide"
+corso: "Musica Elettronica"
+esame: "COME01"
 abstract: |
   questo dovrebbe essere il sommario...
 header-includes:
@@ -22,12 +22,11 @@ csl: styles/consAq-author-date.csl
 nocite: "@*"
 ---
 
-# INTRODUZIONE!!!
+# Introduction
 
-questa è l'introduzione ?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-
-# GUIDA ALL'USO DI PANDOC
+# Fixed Media
 
 Questa sezione illustra come utilizzare le principali funzionalità di Pandoc per la redazione della tesina: citazioni bibliografiche, tabelle, equazioni matematiche e figure.
 
@@ -381,7 +380,15 @@ $$ {#eq:overlap}
 dove $O$ è il fattore di sovrapposizione, $D$ la densità in Hz e $T$ la durata in millisecondi.
 
 
-# CONCLUSIONE
+# Diffusion
+
+# DSP
+
+# Electroacoustic Chain
+
+# Performance Instructions
+
+# Thanks
 
 Eppur si muove...
 
