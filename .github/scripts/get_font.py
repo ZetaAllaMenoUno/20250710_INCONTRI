@@ -3,7 +3,7 @@ import yaml
 import sys
 
 # File di configurazione
-config_file = "config.yml"
+config_file = "metadata.yaml"
 
 try:
     with open(config_file, "r") as f:
@@ -16,7 +16,7 @@ except yaml.YAMLError as e:
     sys.exit(1)
 
 # Prendi il font dal YAML in modo sicuro
-font_value = cfg.get("environment", {}).get("font")
+font_value = cfg.get("mainfont", {}).get("font")
 if not font_value or not isinstance(font_value, str):
     font = "liberation"
 else:
