@@ -360,54 +360,74 @@ $endif$
 % ============================================================================
 % FRONTESPIZIO CON RIASSUNTO
 % ============================================================================
+
+% ============================================================================
+% FRONTESPIZIO SEMPLIFICATO
+% ============================================================================
 $if(title)$
 \begin{titlepage}
     \centering
     \sffamily
     
-    % Intestazione
+    % Titolo principale
     {
-        \normalsize
-        Corsi Accademici di $corso$ \\
-        $conservatorio$ \par
+        \LARGE\bfseries
+        $title$ \par
+    }
+    \vspace{0.5cm}
+    
+    % Sottotitolo (se presente)
+    $if(subtitle)$
+    {
+        \Large
+        $subtitle$ \par
+    }
+    \vspace{0.5cm}
+    $endif$
+    
+    % Gruppo (se presente)
+    $if(group)$
+    {
+        \large
+        $group$ \par
     }
     \vspace{1cm}
+    $endif$
     
-    % Titolo
+    % Lista autori con ciclo for
+    $if(author)$
     {
-        \large\bfseries
-        \MakeUppercase{$title$} \par
-        $if(subtitle)$
-          {\normalsize\itshape $subtitle$ \par}
-        $endif$
+        \large
+        \textbf{Autori:} \par
+        \vspace{0.3cm}
+        $for(author)$
+        $author$$sep$ \par
+        $endfor$
+        \par
     }
-    \vspace{.5cm}
+    \vspace{1cm}
+    $endif$
     
-    % Autore
+    % Data (se presente)
+    $if(date)$
     {
         \normalsize
-        di $author$ \par
-    }
-    \vspace{.5cm}
-    
-    % Dati esame
-    {
-        \normalsize
-        esame di $esame$ \\
         $date$ \par
     }
-    \vspace{.5cm}
+    $endif$
     
-    % Riassunto
+    % Riassunto (se presente)
     $if(abstract)$
+    \vspace{1cm}
     \begin{minipage}{0.9\textwidth}
-        \centering\large\bfseries RIASSUNTO \par
-        \vspace{0.5cm}
+        \centering\normalsize\bfseries RIASSUNTO \par
+        \vspace{0.3cm}
         \normalsize\raggedright\mdseries
         $abstract$
     \end{minipage}
     $endif$
-    \vspace*{1cm}
+    
+    \vfill
 \end{titlepage}
 $endif$
 
