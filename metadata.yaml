@@ -15,7 +15,7 @@ fontsize: 12pt
 toc: true
 toc-depth: 2
 csl: styles/consAq-author-date.csl
-environment:
-  font: #arial
 nocite: "@*"
+mainfont: #Arial # Usa il nome esatto del font di sistema
+sansfont: #Arial # Opzionale: per il testo sans-serif
 ---
