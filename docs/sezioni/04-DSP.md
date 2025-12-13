@@ -8,3 +8,15 @@ Equations for channels 1 and 2: LEFT (x) and RIGHT (y) is as follow:
 - **RIGHT**: $y$
 
 4 Channels in output.
+
+```faust
+import("stdfaust.lib");
+
+sdmx = si.bus(2) <: sums,difs
+    with{
+        sums = +:/(sqrt(2));
+        difs = -:/(sqrt(2));
+    };
+
+process = sdmx;
+``` 
