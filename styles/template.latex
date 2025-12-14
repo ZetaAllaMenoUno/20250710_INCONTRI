@@ -41,6 +41,52 @@ $endif$
 \usepackage{tikz}
 \usetikzlibrary{positioning, shapes.geometric, arrows.meta, patterns}
 
+% ============================================================================
+% LISTINGS - Syntax highlighting per codice Faust
+% ============================================================================
+\usepackage{listings}
+
+% Colori personalizzati per Faust
+\definecolor{yobg}{rgb}{0.9,0.9,1}
+\definecolor{yotxt}{rgb}{0.01,0.01,0.52}
+\definecolor{mylstbg}{rgb}{0.98,0.98,0.98}
+\definecolor{mylstcmt}{rgb}{0.01,0.52,0.01}
+\definecolor{mylstdoc}{rgb}{0.80,0.30,0.80}
+
+% Configurazione listings per Faust
+\lstdefinelanguage{Faust}{%
+  morekeywords={component, declare, environment, import, library, process, ffunction, fconstant, fvariable, button, checkbox, vslider, hslider, nentry, vgroup, hgroup, tgroup, vbargraph, hbargraph, attach},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morecomment=[s][\color{mylstdoc}]{<mdoc>}{</mdoc>},
+  morestring=[b]",
+}
+
+\lstset{%
+  language=Faust,
+  numbers=left,
+  tabsize=4,
+  frame=single,
+  breaklines=true,
+  numberstyle=\tiny\ttfamily,
+  backgroundcolor=\color{mylstbg},
+  basicstyle=\small\ttfamily,
+  commentstyle=\slshape\color{mylstcmt},
+  keywordstyle=\color{yotxt},
+  frameround=tttt,
+  columns=flexible,
+  showstringspaces=false,
+  inputencoding=utf8,
+  extendedchars=true,
+  literate={á}{{\'a}}1 {à}{{\`a}}1 {ä}{{\"a}}1 {â}{{\^a}}1
+           {é}{{\'e}}1 {è}{{\`e}}1 {ë}{{\"e}}1 {ê}{{\^e}}1
+           {ï}{{\"i}}1 {î}{{\^i}}1
+           {ö}{{\"o}}1 {ô}{{\^o}}1
+           {ù}{{\`u}}1 {û}{{\^u}}1
+           {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1,
+  rulecolor=\color{black}
+}
 
 % ============================================================================
 % FONT - Presi direttamente dai metadati
