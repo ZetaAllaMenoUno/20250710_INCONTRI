@@ -154,6 +154,8 @@ sdmx = si.bus(2) <: sums,difs
 process = sdmx;
 ``` 
 
+![Didascalia dell'immagine](percorso/img001.png){#fig:identificatore width=60%}
+
 
 # Electroacoustic Chain
 
