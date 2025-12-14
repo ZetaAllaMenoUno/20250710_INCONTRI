@@ -11,4 +11,4 @@ Equations for channels 1 and 2: LEFT (x) and RIGHT (y) is as follow:
 
 \lstinputlisting{docs/src/sdmx.dsp}
 
-![Didascalia dell'immagine](docs/images/img001.png){#fig:identificatore width=60%}
+![Didascalia dell'immagine](docs/images/img001.png){#fig:identificatore width=10%}
