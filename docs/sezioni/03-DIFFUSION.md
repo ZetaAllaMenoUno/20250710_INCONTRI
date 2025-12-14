@@ -54,6 +54,7 @@ Test
 
 \end{tikzpicture}
 
+
 \begin{tikzpicture}[scale=1]
     \newcommand{\speaker}[3]{
     % #1 = x coordinate center
@@ -78,23 +79,24 @@ Test
     \draw[very thick] (-6,-6) rectangle (6,6);
     
     % REGIA DEL SUONO
-    \draw[thick, fill=regia] (-0.8,-3.2) rectangle (0.8,-2.8);
-    \node at (0,-3) {\small\textbf{REGIA}};
-    \node[below, font=\tiny] at (0,-3.3) {Console diffusione};
+    \draw[thick, fill=regia] (-0.8,-1.2) rectangle (0.8,-1.8);
+    \node at (0,-1.5) {\small\textbf{REGIA}};
+    \node[below, font=\tiny] at (0,-1.8) {Console diffusione};
    
     % Speakers
     \speaker{0}{4.5}{180}
     \speaker{0}{-4.5}{0}
     \speaker{-4.5}{0}{270}
     \speaker{4.5}{0}{90}
+    \speaker{0}{-.7}{0}    
     
     % Cerchio di ascolto ideale
     \draw[thick, dotted, purple] (0,0) circle (5.5);
     
     % Quote dimensioni sala
     \draw[<->, >=Stealth] (-6,-6.5) -- (6,-6.5);
-    \node[below] at (0,-6.5) {12m};
+    \node[below] at (0,-6.5) {8m};
     \draw[<->, >=Stealth] (-6.5,-6) -- (-6.5,6);
-    \node[left, rotate=90] at (-6.5,0) {12m};
+    \node[left, rotate=90] at (-6.5,0) {8m};
 \end{tikzpicture}
 
