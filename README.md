@@ -158,17 +158,9 @@ Equations for channels 1 and 2: LEFT (x) and RIGHT (y) is as follow:
 Eppur si muove...
 
 
-questo **potrebbe** essere il sommario...
-
-
 # BIBLIOGRAFIA
 
 ::: {#refs-bib}
-:::
-
-# DISCOGRAFIA
-
-::: {#refs-dis}
 :::
 
 # SITOGRAFIA
