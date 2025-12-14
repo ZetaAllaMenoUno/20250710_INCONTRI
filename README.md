@@ -31,6 +31,13 @@ The performance will take place without intermissions, with all pieces being man
 
 # Diffusion
 
+Test 
+
+\begin{tikzpicture}
+\draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0);
+\end{tikzpicture}
+
+
 # DSP
 
 Equations for channels 1 and 2: LEFT (x) and RIGHT (y) is as follow:
