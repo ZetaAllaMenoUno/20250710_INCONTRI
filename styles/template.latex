@@ -441,7 +441,7 @@ $if(title)$
     % Gruppo (se presente)
     $if(group)$
     {
-        \large
+        \Large
         $group$ \par
     }
     \vspace{1cm}
@@ -454,7 +454,7 @@ $if(title)$
         \textbf{Authors:} \par
         \vspace{0.3cm}
         $for(author)$
-        $author$$sep$ \par
+        $author$$sep$\vspace{0.2cm}
         $endfor$
         \par
     }
