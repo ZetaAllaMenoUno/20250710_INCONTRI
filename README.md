@@ -156,6 +156,8 @@ sdmx = si.bus(2) <: sums,difs
 process = sdmx;
 ``` 
 
+\lstinputlisting{docs/src/sdmx.dsp}
+
 ![Didascalia dell'immagine](percorso/img001.png){#fig:identificatore width=60%}
 
 
