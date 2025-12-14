@@ -400,7 +400,7 @@ $if(title)$
     $if(author)$
     {
         \large
-        \textbf{Autori:} \par
+        \textbf{Authors:} \par
         \vspace{0.3cm}
         $for(author)$
         $author$$sep$ \par
